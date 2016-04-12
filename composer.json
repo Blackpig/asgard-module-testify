@@ -31,7 +31,7 @@
             "url": "https://github.com/Blackpig/asgard-module-testify"
         }
       ],
-      "scripts": {
+    "scripts": {
         "post-install-cmd": [
           "php artisan module:migrate Testify",
           "php artisan asgard:publish:module Testify"
@@ -40,6 +40,5 @@
           "php artisan module:migrate Testify",
           "php artisan asgard:publish:module Testify"
         ]
-      }
     }
 }
