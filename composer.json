@@ -1,7 +1,14 @@
 {
-	"name": "blackpig/testify",
-	"description": "",
-    "type": "asgard-module",
+	"name": "blackpig/asgard-module-testify",
+	"description": "A testimonials module for Asgard CMS",
+    "type": "asgard-module"
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Stuart Hallewell",
+          "email": "stuart@blackpig.eu"
+        }
+      ],
     "require": {
         "php": ">=5.4",
         "composer/installers": "~1.0",
@@ -13,21 +20,26 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Modules\\Testify\\": ".",
-            "Modules\\": "Modules/"
+            "Modules\\Testify\\": ""
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-	"authors": [
-		{
-			"name": "Pingpong Labs",
-			"email": "pingpong.labs@gmail.com"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Modules\\Testify\\": ""
-		}
-	}
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Blackpig/asgard-module-testify"
+        }
+      ],
+      "scripts": {
+        "post-install-cmd": [
+          "php artisan module:migrate Testify",
+          "php artisan asgard:publish:module Testify"
+        ],
+        "post-update-cmd": [
+          "php artisan module:migrate Testify",
+          "php artisan asgard:publish:module Testify"
+        ]
+      }
+    }
 }
