@@ -1,7 +1,7 @@
 {
 	"name": "blackpig/asgard-module-testify",
 	"description": "A testimonials module for Asgard CMS",
-    "type": "asgard-module"
+    "type": "asgard-module",
     "license": "MIT",
     "authors": [
         {
